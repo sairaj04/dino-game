@@ -18,7 +18,7 @@ let lastTime;
 let speedScale;
 let score;
 function update(time) {
-  if (lastTime === null) {
+  if (lastTime == null) {
     lastTime = time;
     window.requestAnimationFrame(update);
     return;
@@ -79,7 +79,6 @@ function handleLose() {
 }
 
 function setPixelToWorldScale() {
-  console.log("c");
   let worldToPixelScale;
   if (window.innerWidth / window.innerHeight < WORLD_WIDTH / WORLD_HEIGHT) {
     worldToPixelScale = window.innerWidth / WORLD_WIDTH;
@@ -88,5 +87,5 @@ function setPixelToWorldScale() {
   }
 
   worldElem.style.width = `${WORLD_WIDTH * worldToPixelScale}px`;
-  worldElem.style.height = "${WORLD_HEIGHT * worldToPixelScale}px";
+  worldElem.style.height = `${WORLD_HEIGHT * worldToPixelScale}px`;
 }
